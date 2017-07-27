@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "async": "^2.5.0",
+    "commander": "^2.11.0",
     "moment-timezone": "^0.5.13",
     "node-libcurl": "^1.1.0",
     "randomstring": "^1.1.5",
