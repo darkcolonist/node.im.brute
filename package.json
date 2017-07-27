@@ -9,6 +9,10 @@
   "author": "darkcolonist@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "async": "^2.5.0",
+    "moment-timezone": "^0.5.13",
+    "node-libcurl": "^1.1.0",
+    "randomstring": "^1.1.5",
     "winston": "^2.3.1"
   }
 }
