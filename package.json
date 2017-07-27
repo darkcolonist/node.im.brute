@@ -1,0 +1,14 @@
+{
+  "name": "node.im.brute",
+  "version": "1.0.0",
+  "description": "brute tester for im",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "darkcolonist@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "winston": "^2.3.1"
+  }
+}
