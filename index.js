@@ -13,7 +13,10 @@ program
 curler.init();
 
 var url = "http://dev.test/curlable.php?client=chronus";
-// var url = "http://20170727111527someunknownurl.com";
+var url = "http://im3.nmscreative.com/api/inbound";
+var url = "http://im3lb.nmscreative.com/api/inbound";
+var url = "http://im.nmsloop.com/api/inbound";
+var url = "http://20170727111527someunknownurl.com";
 
 var iterations = program.iterations ? program.iterations : 200;
 var concurrency = program.concurrency ? program.concurrency : 50;
@@ -31,14 +34,62 @@ var messages = {
   }
 };
 
+var toHelper = {
+  /**
+   * staging parameters
+   */
+  // list: ["HottsMiL33", "espiereef", "HottsMiL33", "santimellisa", "mylustylookz", "espiereef", "kittybenzedrine"],
+  /**
+   * live parameters
+   */
+  list: ["gale", "puffy", "emma", "bob", "ted", "robin"],
+  random: function(){
+    var item = this.list[Math.floor(Math.random()*this.list.length)];
+
+    return item;
+  }
+}
+
+var fromHelper = {
+  /**
+   * staging parameters
+   */
+  // list: ["toughndtender","aa0531x","BoHigh","honkhan","cumonmyface555","saleen4111","Bedbug67"],
+  /**
+   * live parameters
+   */
+  list: ["shey","Pippin"],
+  random: function(){
+    var item = this.list[Math.floor(Math.random()*this.list.length)];
+
+    return item;
+  }
+}
+
 var mockData = () => {
   // return undefined;
+  
+  /**
+   * staging parameters
+   */
+  // return {
+  //   "username":"anubis",
+  //   "password":"anubis123",
+  //   "service_code":"03194563",
+  //   "to":toHelper.random(),
+  //   "from":fromHelper.random(),
+  //   "message":messages.random(),
+  //   "additional_info":{}
+  // };
+  /**
+   * live parameters
+   */
   return {
     "username":"anubis",
     "password":"anubis123",
-    "service_code":"imtestshan",
-    "to":"cheese",
-    "from":"spaniel",
+    "service_code":"imtest",
+    "to":toHelper.random(),
+    "from":fromHelper.random(),
     "message":messages.random(),
     "additional_info":{}
   };
